@@ -1,0 +1,238 @@
+/* manrope-800 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/manrope-v15-latin-800.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* !css variables */
+:root {
+  --clr-primary-100: 193 38% 86%;
+  --clr-primary-400: 150 100% 66%;
+
+  --clr-neutral-100: 217 19% 38%;
+  --clr-neutral-200: 217 19% 24%;
+  --clr-neutral-300: 218 23% 16%;
+
+  --ff-body: "Manrope", sans-serif;
+}
+/* !reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-size: 100%;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* !sometimes referred to as .sr-only */
+.visually-hidden:not(:focus):not(:active):not(:focus-within) {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+*:focus-visible {
+  outline: 0.1875rem dotted hsl(var(--clr-primary-400));
+  outline-offset: 0.3125rem;
+}
+
+/* !general styles */
+body {
+  font-family: var(--ff-body);
+  background-color: hsl(var(--clr-neutral-300));
+  display: grid;
+  place-content: center;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* !utility classes */
+.grid {
+  display: grid;
+  gap: var(--_gap, 1rem);
+}
+
+/* !adivice generator styles */
+.advice__wrapper {
+  margin-inline: 1rem;
+  display: grid;
+  grid: max-content 2rem / 1fr;
+}
+
+.adivice__title {
+  color: hsl(var(--clr-primary-400));
+}
+
+.advice__generator {
+  background-color: hsl(var(--clr-neutral-200));
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  max-inline-size: 33.75rem;
+}
+
+.advice__id {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+  font-weight: 800;
+  color: hsl(var(--clr-primary-400));
+}
+
+.advice {
+  font-size: clamp(1rem, 5vw, 1.75rem);
+  color: hsl(var(--clr-primary-100));
+}
+
+.divider__banner img {
+  width: 100%;
+  margin-block-end: 2rem;
+}
+
+.advice__generator-btn {
+  background-color: hsl(var(--clr-primary-400));
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: grid;
+  place-self: end center;
+}
+
+.advice__generator-btn:is(:hover, :focus-visible) {
+  box-shadow: 0 0.3rem 2rem 0.3rem hsl(var(--clr-primary-400));
+}
+
+.advice__generator-btn img {
+  display: grid;
+  place-self: center;
+}
+
+/* !attribution */
+.attribution {
+  position: fixed;
+  inset: auto auto 1rem 1rem;
+  font-size: 0.75rem;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+
+.attribution a {
+  color: hsl(var(--clr-primary-400));
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="Frontend Mentor - Advice generator app" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="Rebecca Padgett" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <title>Frontend Mentor | Advice generator app</title>
+  <!-- !css -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- !JavaScript -->
+  <script src="./assets/js/script.js" defer></script>
+</head>
+
+<body>
+  <main class="advice__wrapper">
+    <h1 class="visually-hidden advice__title">Advice generator app</h1>
+    <article class="advice__generator grid">
+      <!-- !Advice ID goes here -->
+      <h2 class="advice__id" aria-live="assertive">
+        Advice #
+        <span data-js-id>117</span>
+      </h2>
+      <q class="advice" aria-live="assertive" data-js-quote>
+        <!-- !Advice text goes here -->
+        It is easy to sit up and take notice, what's difficult is getting up
+        and taking action.
+      </q>
+      <picture class="divider__banner">
+        <source media="(min-width: 45em)" srcset="./assets/images/pattern-divider-desktop.svg" />
+        <img src="./assets/images/pattern-divider-mobile.svg" aria-hidden="true" alt="" />
+      </picture>
+    </article>
+    <button class="advice__generator-btn" data-js-btn aria-label="Generate new advice">
+      <img src="./assets/images/icon-dice.svg" width="24" height="24" alt="" aria-hidden="true" />
+    </button>
+  </main>
+  <footer class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+      Frontend Mentor
+    </a>
+    . Coded by
+    <a href="#">Rebecca Padgett</a>
+    .
+  </footer>
+</body>
+
+</html>
