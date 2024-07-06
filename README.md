@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor]()
-- Live Site URL: [Github Pages]()
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-advice-generator-app-using-html-css-and-javascript-_Zaz_ZWXT_)
+- Live Site URL: [Github Pages](https://bccpadge.github.io/advice-generator-app/)
 
 ## My process
 
